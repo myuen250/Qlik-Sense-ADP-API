@@ -1,0 +1,1343 @@
+{
+  "id" : "/hr/v1/associateContacts.json#",
+  "$schema" : "http://json-schema.org/draft-03/schema#",
+  "title" : "AssociateContacts",
+  "description" : "A list of associate contacts.",
+  "additionalProperties" : false,
+  "type" : "object",
+  "properties" : {
+    "associateContacts" : {
+      "id" : "associateContacts",
+      "type" : "array",
+      "items" : {
+        "description" : "An associate is a person with a relationship to an organization. An associate contact returns the contact information for an associate",
+        "type" : "object",
+        "properties" : {
+          "associateOID" : {
+            "description" : "A unique identifier of an associate",
+            "type" : "string"
+          },
+          "legalName" : {
+            "description" : "The current legal name of the person in the associated context. For example, if the context is set to Germany, this equates to the legal name of the person in Germany.",
+            "type" : "object",
+            "additionalProperties" : false,
+            "properties" : {
+              "givenName" : {
+                "description" : "The first name of the person",
+                "type" : "string"
+              },
+              "middleName" : {
+                "description" : "Person middle name or initial",
+                "type" : "string"
+              },
+              "familyName1" : {
+                "description" : "Person family name 1",
+                "type" : "string"
+              },
+              "familyName2" : {
+                "description" : "Person family name 2",
+                "type" : "string"
+              },
+              "formattedName" : {
+                "description" : "A formatted version of the person name",
+                "type" : "string"
+              },
+              "nameCode" : {
+                "description" : "A coded name or descriptive label of the associated entity. If this is a coded value, codeValue and shortName should be used. If this is just a string value, only shortName is necessary",
+                "type" : "object",
+                "additionalProperties" : false,
+                "properties" : {
+                  "codeValue" : {
+                    "description" : "The code for the related entity",
+                    "type" : "string"
+                  },
+                  "shortName" : {
+                    "description" : "Short description of the related code not to exceed 25 characters",
+                    "type" : "string"
+                  },
+                  "longName" : {
+                    "description" : "Long description of the related code",
+                    "type" : "string"
+                  }
+                }
+              },
+              "scriptCode" : {
+                "description" : "The type of script the name is in. Associated codelist is ISO15924-A. Use the alpha-4 representation versus the single digit numeric representation. Format is lowercase with inital letter capitalized. For example, Cyrillic is Cyrl",
+                "type" : "object",
+                "additionalProperties" : false,
+                "properties" : {
+                  "codeValue" : {
+                    "description" : "The code for the related entity",
+                    "type" : "string"
+                  },
+                  "shortName" : {
+                    "description" : "Short description of the related code not to exceed 25 characters",
+                    "type" : "string"
+                  },
+                  "longName" : {
+                    "description" : "Long description of the related code",
+                    "type" : "string"
+                  }
+                }
+              },
+              "preferredSalutations" : {
+                "description" : "A list of preferred salutations",
+                "type" : "array",
+                "items" : {
+                  "description" : "A preferred salutation, e.g. Mr., Dr., etc.",
+                  "type" : "object",
+                  "additionalProperties" : false,
+                  "properties" : {
+                    "salutationCode" : {
+                      "description" : "The saluation code",
+                      "type" : "object",
+                      "additionalProperties" : false,
+                      "properties" : {
+                        "codeValue" : {
+                          "description" : "The code for the related entity",
+                          "type" : "string"
+                        },
+                        "shortName" : {
+                          "description" : "Short description of the related code not to exceed 25 characters",
+                          "type" : "string"
+                        },
+                        "longName" : {
+                          "description" : "Long description of the related code",
+                          "type" : "string"
+                        }
+                      }
+                    },
+                    "typeCode" : {
+                      "description" : "The type of salutation, e.g. Professional, Social",
+                      "type" : "object",
+                      "additionalProperties" : false,
+                      "properties" : {
+                        "codeValue" : {
+                          "description" : "The code for the related entity",
+                          "type" : "string"
+                        },
+                        "shortName" : {
+                          "description" : "Short description of the related code not to exceed 25 characters",
+                          "type" : "string"
+                        },
+                        "longName" : {
+                          "description" : "Long description of the related code",
+                          "type" : "string"
+                        }
+                      }
+                    },
+                    "sequenceNumber" : {
+                      "description" : "The sequence or order of the salutation",
+                      "type" : "integer"
+                    }
+                  }
+                }
+              },
+              "nickName" : {
+                "description" : "A preferred name, e.g. a nickname",
+                "type" : "string"
+              },
+              "generationAffixCode" : {
+                "description" : "The generational affix of the person name, e.g. Jr, Sr",
+                "type" : "object",
+                "additionalProperties" : false,
+                "properties" : {
+                  "codeValue" : {
+                    "description" : "The code for the related entity",
+                    "type" : "string"
+                  },
+                  "shortName" : {
+                    "description" : "Short description of the related code not to exceed 25 characters",
+                    "type" : "string"
+                  },
+                  "longName" : {
+                    "description" : "Long description of the related code",
+                    "type" : "string"
+                  }
+                }
+              },
+              "qualificationAffixCode" : {
+                "description" : "The qualification affix of the person name",
+                "type" : "object",
+                "additionalProperties" : false,
+                "properties" : {
+                  "codeValue" : {
+                    "description" : "The code for the related entity",
+                    "type" : "string"
+                  },
+                  "shortName" : {
+                    "description" : "Short description of the related code not to exceed 25 characters",
+                    "type" : "string"
+                  },
+                  "longName" : {
+                    "description" : "Long description of the related code",
+                    "type" : "string"
+                  }
+                }
+              },
+              "titleAffixCodes" : {
+                "description" : "Person titles",
+                "type" : "array",
+                "items" : {
+                  "description" : "Person titles",
+                  "type" : "object",
+                  "additionalProperties" : false,
+                  "properties" : {
+                    "affixCode" : {
+                      "description" : "The title affix of the person name",
+                      "type" : "object",
+                      "additionalProperties" : false,
+                      "properties" : {
+                        "codeValue" : {
+                          "description" : "The code for the related entity",
+                          "type" : "string"
+                        },
+                        "shortName" : {
+                          "description" : "Short description of the related code not to exceed 25 characters",
+                          "type" : "string"
+                        },
+                        "longName" : {
+                          "description" : "Long description of the related code",
+                          "type" : "string"
+                        }
+                      }
+                    },
+                    "sequenceNumber" : {
+                      "description" : "The sequence or order of the title",
+                      "type" : "integer"
+                    }
+                  }
+                }
+              },
+              "familyName1Prefix" : {
+                "description" : "Person family name pre-fix",
+                "type" : "string"
+              },
+              "familyName2Prefix" : {
+                "description" : "Person family name pre-fix",
+                "type" : "string"
+              },
+              "initials" : {
+                "description" : "Person initials",
+                "type" : "string"
+              }
+            }
+          },
+          "preferredName" : {
+            "description" : "The preferred name of the person in the associated context. A preferred name is often a variation on the current name that that the person has indicated as preferred. It is the full name by which the person wishes to be known within the context of the organization.",
+            "type" : "object",
+            "additionalProperties" : false,
+            "properties" : {
+              "givenName" : {
+                "description" : "The first name of the person",
+                "type" : "string"
+              },
+              "middleName" : {
+                "description" : "Person middle name or initial",
+                "type" : "string"
+              },
+              "familyName1" : {
+                "description" : "Person family name 1",
+                "type" : "string"
+              },
+              "familyName2" : {
+                "description" : "Person family name 2",
+                "type" : "string"
+              },
+              "formattedName" : {
+                "description" : "A formatted version of the person name",
+                "type" : "string"
+              },
+              "nameCode" : {
+                "description" : "A coded name or descriptive label of the associated entity. If this is a coded value, codeValue and shortName should be used. If this is just a string value, only shortName is necessary",
+                "type" : "object",
+                "additionalProperties" : false,
+                "properties" : {
+                  "codeValue" : {
+                    "description" : "The code for the related entity",
+                    "type" : "string"
+                  },
+                  "shortName" : {
+                    "description" : "Short description of the related code not to exceed 25 characters",
+                    "type" : "string"
+                  },
+                  "longName" : {
+                    "description" : "Long description of the related code",
+                    "type" : "string"
+                  }
+                }
+              },
+              "scriptCode" : {
+                "description" : "The type of script the name is in. Associated codelist is ISO15924-A. Use the alpha-4 representation versus the single digit numeric representation. Format is lowercase with inital letter capitalized. For example, Cyrillic is Cyrl",
+                "type" : "object",
+                "additionalProperties" : false,
+                "properties" : {
+                  "codeValue" : {
+                    "description" : "The code for the related entity",
+                    "type" : "string"
+                  },
+                  "shortName" : {
+                    "description" : "Short description of the related code not to exceed 25 characters",
+                    "type" : "string"
+                  },
+                  "longName" : {
+                    "description" : "Long description of the related code",
+                    "type" : "string"
+                  }
+                }
+              },
+              "preferredSalutations" : {
+                "description" : "A list of preferred salutations",
+                "type" : "array",
+                "items" : {
+                  "description" : "A preferred salutation, e.g. Mr., Dr., etc.",
+                  "type" : "object",
+                  "additionalProperties" : false,
+                  "properties" : {
+                    "salutationCode" : {
+                      "description" : "The saluation code",
+                      "type" : "object",
+                      "additionalProperties" : false,
+                      "properties" : {
+                        "codeValue" : {
+                          "description" : "The code for the related entity",
+                          "type" : "string"
+                        },
+                        "shortName" : {
+                          "description" : "Short description of the related code not to exceed 25 characters",
+                          "type" : "string"
+                        },
+                        "longName" : {
+                          "description" : "Long description of the related code",
+                          "type" : "string"
+                        }
+                      }
+                    },
+                    "typeCode" : {
+                      "description" : "The type of salutation, e.g. Professional, Social",
+                      "type" : "object",
+                      "additionalProperties" : false,
+                      "properties" : {
+                        "codeValue" : {
+                          "description" : "The code for the related entity",
+                          "type" : "string"
+                        },
+                        "shortName" : {
+                          "description" : "Short description of the related code not to exceed 25 characters",
+                          "type" : "string"
+                        },
+                        "longName" : {
+                          "description" : "Long description of the related code",
+                          "type" : "string"
+                        }
+                      }
+                    },
+                    "sequenceNumber" : {
+                      "description" : "The sequence or order of the salutation",
+                      "type" : "integer"
+                    }
+                  }
+                }
+              },
+              "nickName" : {
+                "description" : "A preferred name, e.g. a nickname",
+                "type" : "string"
+              },
+              "generationAffixCode" : {
+                "description" : "The generational affix of the person name, e.g. Jr, Sr",
+                "type" : "object",
+                "additionalProperties" : false,
+                "properties" : {
+                  "codeValue" : {
+                    "description" : "The code for the related entity",
+                    "type" : "string"
+                  },
+                  "shortName" : {
+                    "description" : "Short description of the related code not to exceed 25 characters",
+                    "type" : "string"
+                  },
+                  "longName" : {
+                    "description" : "Long description of the related code",
+                    "type" : "string"
+                  }
+                }
+              },
+              "qualificationAffixCode" : {
+                "description" : "The qualification affix of the person name",
+                "type" : "object",
+                "additionalProperties" : false,
+                "properties" : {
+                  "codeValue" : {
+                    "description" : "The code for the related entity",
+                    "type" : "string"
+                  },
+                  "shortName" : {
+                    "description" : "Short description of the related code not to exceed 25 characters",
+                    "type" : "string"
+                  },
+                  "longName" : {
+                    "description" : "Long description of the related code",
+                    "type" : "string"
+                  }
+                }
+              },
+              "titleAffixCodes" : {
+                "description" : "Person titles",
+                "type" : "array",
+                "items" : {
+                  "description" : "Person titles",
+                  "type" : "object",
+                  "additionalProperties" : false,
+                  "properties" : {
+                    "affixCode" : {
+                      "description" : "The title affix of the person name",
+                      "type" : "object",
+                      "additionalProperties" : false,
+                      "properties" : {
+                        "codeValue" : {
+                          "description" : "The code for the related entity",
+                          "type" : "string"
+                        },
+                        "shortName" : {
+                          "description" : "Short description of the related code not to exceed 25 characters",
+                          "type" : "string"
+                        },
+                        "longName" : {
+                          "description" : "Long description of the related code",
+                          "type" : "string"
+                        }
+                      }
+                    },
+                    "sequenceNumber" : {
+                      "description" : "The sequence or order of the title",
+                      "type" : "integer"
+                    }
+                  }
+                }
+              },
+              "familyName1Prefix" : {
+                "description" : "Person family name pre-fix",
+                "type" : "string"
+              },
+              "familyName2Prefix" : {
+                "description" : "Person family name pre-fix",
+                "type" : "string"
+              },
+              "initials" : {
+                "description" : "Person initials",
+                "type" : "string"
+              }
+            }
+          },
+          "communication" : {
+            "description" : "A container of communication mechanisms",
+            "type" : "object",
+            "additionalProperties" : false,
+            "properties" : {
+              "landlines" : {
+                "description" : "A list of land-line telephone numbers",
+                "type" : "array",
+                "items" : {
+                  "type" : "object",
+                  "additionalProperties" : false,
+                  "properties" : {
+                    "nameCode" : {
+                      "description" : "A coded name or descriptive label of the associated entity. If this is a coded value, codeValue and shortName should be used. If this is just a string value, only shortName is necessary ",
+                      "type" : "object",
+                      "additionalProperties" : false,
+                      "properties" : {
+                        "codeValue" : {
+                          "description" : "The code for the related entity",
+                          "type" : "string"
+                        },
+                        "shortName" : {
+                          "description" : "Short description of the related code not to exceed 25 characters",
+                          "type" : "string"
+                        },
+                        "longName" : {
+                          "description" : "Long description of the related code",
+                          "type" : "string"
+                        }
+                      }
+                    },
+                    "countryDialing" : {
+                      "description" : "The country dialing code is the national prefix to be used when dialing TO that particular country FROM another country.  ",
+                      "type" : "string"
+                    },
+                    "areaDialing" : {
+                      "description" : "The local area dialing code for a telephone number.",
+                      "type" : "string"
+                    },
+                    "dialNumber" : {
+                      "description" : "The local communication number, not including country dialing or area dialing codes.   If component parts of the telephone number are being communicated then the dialNumber is required.",
+                      "type" : "string"
+                    },
+                    "extension" : {
+                      "description" : "The extension of the local communication number.  In the case of a Telephone Number accessing a Pager Network, the extension may be the Pager Identification Number required to leave a message for the Pager Number (i.e. Pager Pin).  These are mutually exclusive.",
+                      "type" : "string"
+                    },
+                    "access" : {
+                      "description" : "National Direct Dialing Prefix.  Also known as the trunk prefix or National Prefix.  It is the number to be dialed in a domestic telephone call, preceding any necessary area code and subscriber number (i.e. dial number).  When calling from outside of the country, the national direct dial prefix is omitted by the caller.  In Australia, Germany, and United Kingdom the trunk prefix is 0.  In the US and Canada it is 1.",
+                      "type" : "string"
+                    },
+                    "formattedNumber" : {
+                      "description" : "The formatted telephone number.  The component parts of the telephone are put together into a presentation pattern as defined by the regex format specified.  Please note that \\ is used as an escape character in regex, but a double \\ is needed to escape within the json schema.  The regex will accept +CC NNNNNNNNNNNNNN where + is the symbol indicating the caller to enter their country specific code to call from outside the country.  CC is the country code for an international number (optional), and the area code and dial number.  The local access code (i.e. 1 (201) 333 4444. 1 is the access code in US) is not passed.  The UI will present the phone number following its own presentation convention",
+                      "type" : "string"
+                    },
+                    "itemID" : {
+                      "description" : "The unique identifier of the object in a collection",
+                      "type" : "string"
+                    }
+                  }
+                }
+              },
+              "mobiles" : {
+                "description" : "A list of mobile telephone numbers",
+                "type" : "array",
+                "items" : {
+                  "type" : "object",
+                  "additionalProperties" : false,
+                  "properties" : {
+                    "nameCode" : {
+                      "description" : "A coded name or descriptive label of the associated entity. If this is a coded value, codeValue and shortName should be used. If this is just a string value, only shortName is necessary ",
+                      "type" : "object",
+                      "additionalProperties" : false,
+                      "properties" : {
+                        "codeValue" : {
+                          "description" : "The code for the related entity",
+                          "type" : "string"
+                        },
+                        "shortName" : {
+                          "description" : "Short description of the related code not to exceed 25 characters",
+                          "type" : "string"
+                        },
+                        "longName" : {
+                          "description" : "Long description of the related code",
+                          "type" : "string"
+                        }
+                      }
+                    },
+                    "countryDialing" : {
+                      "description" : "The country dialing code is the national prefix to be used when dialing TO that particular country FROM another country.  ",
+                      "type" : "string"
+                    },
+                    "areaDialing" : {
+                      "description" : "The local area dialing code for a telephone number.",
+                      "type" : "string"
+                    },
+                    "dialNumber" : {
+                      "description" : "The local communication number, not including country dialing or area dialing codes.   If component parts of the telephone number are being communicated then the dialNumber is required.",
+                      "type" : "string"
+                    },
+                    "extension" : {
+                      "description" : "The extension of the local communication number.  In the case of a Telephone Number accessing a Pager Network, the extension may be the Pager Identification Number required to leave a message for the Pager Number (i.e. Pager Pin).  These are mutually exclusive.",
+                      "type" : "string"
+                    },
+                    "access" : {
+                      "description" : "National Direct Dialing Prefix.  Also known as the trunk prefix or National Prefix.  It is the number to be dialed in a domestic telephone call, preceding any necessary area code and subscriber number (i.e. dial number).  When calling from outside of the country, the national direct dial prefix is omitted by the caller.  In Australia, Germany, and United Kingdom the trunk prefix is 0.  In the US and Canada it is 1.",
+                      "type" : "string"
+                    },
+                    "formattedNumber" : {
+                      "description" : "The formatted telephone number.  The component parts of the telephone are put together into a presentation pattern as defined by the regex format specified.  Please note that \\ is used as an escape character in regex, but a double \\ is needed to escape within the json schema.  The regex will accept +CC NNNNNNNNNNNNNN where + is the symbol indicating the caller to enter their country specific code to call from outside the country.  CC is the country code for an international number (optional), and the area code and dial number.  The local access code (i.e. 1 (201) 333 4444. 1 is the access code in US) is not passed.  The UI will present the phone number following its own presentation convention",
+                      "type" : "string"
+                    },
+                    "itemID" : {
+                      "description" : "The unique identifier of the object in a collection",
+                      "type" : "string"
+                    }
+                  }
+                }
+              },
+              "faxes" : {
+                "description" : "A list of fax telephone numbers",
+                "type" : "array",
+                "items" : {
+                  "type" : "object",
+                  "additionalProperties" : false,
+                  "properties" : {
+                    "nameCode" : {
+                      "description" : "A coded name or descriptive label of the associated entity. If this is a coded value, codeValue and shortName should be used. If this is just a string value, only shortName is necessary ",
+                      "type" : "object",
+                      "additionalProperties" : false,
+                      "properties" : {
+                        "codeValue" : {
+                          "description" : "The code for the related entity",
+                          "type" : "string"
+                        },
+                        "shortName" : {
+                          "description" : "Short description of the related code not to exceed 25 characters",
+                          "type" : "string"
+                        },
+                        "longName" : {
+                          "description" : "Long description of the related code",
+                          "type" : "string"
+                        }
+                      }
+                    },
+                    "countryDialing" : {
+                      "description" : "The country dialing code is the national prefix to be used when dialing TO that particular country FROM another country.  ",
+                      "type" : "string"
+                    },
+                    "areaDialing" : {
+                      "description" : "The local area dialing code for a telephone number.",
+                      "type" : "string"
+                    },
+                    "dialNumber" : {
+                      "description" : "The local communication number, not including country dialing or area dialing codes.   If component parts of the telephone number are being communicated then the dialNumber is required.",
+                      "type" : "string"
+                    },
+                    "extension" : {
+                      "description" : "The extension of the local communication number.  In the case of a Telephone Number accessing a Pager Network, the extension may be the Pager Identification Number required to leave a message for the Pager Number (i.e. Pager Pin).  These are mutually exclusive.",
+                      "type" : "string"
+                    },
+                    "access" : {
+                      "description" : "National Direct Dialing Prefix.  Also known as the trunk prefix or National Prefix.  It is the number to be dialed in a domestic telephone call, preceding any necessary area code and subscriber number (i.e. dial number).  When calling from outside of the country, the national direct dial prefix is omitted by the caller.  In Australia, Germany, and United Kingdom the trunk prefix is 0.  In the US and Canada it is 1.",
+                      "type" : "string"
+                    },
+                    "formattedNumber" : {
+                      "description" : "The formatted telephone number.  The component parts of the telephone are put together into a presentation pattern as defined by the regex format specified.  Please note that \\ is used as an escape character in regex, but a double \\ is needed to escape within the json schema.  The regex will accept +CC NNNNNNNNNNNNNN where + is the symbol indicating the caller to enter their country specific code to call from outside the country.  CC is the country code for an international number (optional), and the area code and dial number.  The local access code (i.e. 1 (201) 333 4444. 1 is the access code in US) is not passed.  The UI will present the phone number following its own presentation convention",
+                      "type" : "string"
+                    },
+                    "itemID" : {
+                      "description" : "The unique identifier of the object in a collection",
+                      "type" : "string"
+                    }
+                  }
+                }
+              },
+              "pagers" : {
+                "description" : "A list of pager telephone numbers",
+                "type" : "array",
+                "items" : {
+                  "type" : "object",
+                  "additionalProperties" : false,
+                  "properties" : {
+                    "nameCode" : {
+                      "description" : "A coded name or descriptive label of the associated entity. If this is a coded value, codeValue and shortName should be used. If this is just a string value, only shortName is necessary ",
+                      "type" : "object",
+                      "additionalProperties" : false,
+                      "properties" : {
+                        "codeValue" : {
+                          "description" : "The code for the related entity",
+                          "type" : "string"
+                        },
+                        "shortName" : {
+                          "description" : "Short description of the related code not to exceed 25 characters",
+                          "type" : "string"
+                        },
+                        "longName" : {
+                          "description" : "Long description of the related code",
+                          "type" : "string"
+                        }
+                      }
+                    },
+                    "countryDialing" : {
+                      "description" : "The country dialing code is the national prefix to be used when dialing TO that particular country FROM another country.  ",
+                      "type" : "string"
+                    },
+                    "areaDialing" : {
+                      "description" : "The local area dialing code for a telephone number.",
+                      "type" : "string"
+                    },
+                    "dialNumber" : {
+                      "description" : "The local communication number, not including country dialing or area dialing codes.   If component parts of the telephone number are being communicated then the dialNumber is required.",
+                      "type" : "string"
+                    },
+                    "extension" : {
+                      "description" : "The extension of the local communication number.  In the case of a Telephone Number accessing a Pager Network, the extension may be the Pager Identification Number required to leave a message for the Pager Number (i.e. Pager Pin).  These are mutually exclusive.",
+                      "type" : "string"
+                    },
+                    "access" : {
+                      "description" : "National Direct Dialing Prefix.  Also known as the trunk prefix or National Prefix.  It is the number to be dialed in a domestic telephone call, preceding any necessary area code and subscriber number (i.e. dial number).  When calling from outside of the country, the national direct dial prefix is omitted by the caller.  In Australia, Germany, and United Kingdom the trunk prefix is 0.  In the US and Canada it is 1.",
+                      "type" : "string"
+                    },
+                    "formattedNumber" : {
+                      "description" : "The formatted telephone number.  The component parts of the telephone are put together into a presentation pattern as defined by the regex format specified.  Please note that \\ is used as an escape character in regex, but a double \\ is needed to escape within the json schema.  The regex will accept +CC NNNNNNNNNNNNNN where + is the symbol indicating the caller to enter their country specific code to call from outside the country.  CC is the country code for an international number (optional), and the area code and dial number.  The local access code (i.e. 1 (201) 333 4444. 1 is the access code in US) is not passed.  The UI will present the phone number following its own presentation convention",
+                      "type" : "string"
+                    },
+                    "itemID" : {
+                      "description" : "The unique identifier of the object in a collection",
+                      "type" : "string"
+                    }
+                  }
+                }
+              },
+              "emails" : {
+                "description" : "A list of email addresses",
+                "type" : "array",
+                "items" : {
+                  "type" : "object",
+                  "additionalProperties" : false,
+                  "properties" : {
+                    "nameCode" : {
+                      "description" : "A coded name or descriptive label of the associated entity. If this is a coded value, codeValue and shortName should be used. If this is just a string value, only shortName is necessary ",
+                      "type" : "object",
+                      "additionalProperties" : false,
+                      "properties" : {
+                        "codeValue" : {
+                          "description" : "The code for the related entity",
+                          "type" : "string"
+                        },
+                        "shortName" : {
+                          "description" : "Short description of the related code not to exceed 25 characters",
+                          "type" : "string"
+                        },
+                        "longName" : {
+                          "description" : "Long description of the related code",
+                          "type" : "string"
+                        }
+                      }
+                    },
+                    "emailUri" : {
+                      "description" : "The URI of the associated email address",
+                      "type" : "string",
+                      "format" : "email"
+                    },
+                    "itemID" : {
+                      "description" : "The unique identifier of the object in a collection",
+                      "type" : "string"
+                    }
+                  }
+                }
+              },
+              "internetAddresses" : {
+                "description" : "A list of internet URIs",
+                "type" : "array",
+                "items" : {
+                  "type" : "object",
+                  "title" : "InternetAddressWithItemID",
+                  "additionalProperties" : false,
+                  "properties" : {
+                    "nameCode" : {
+                      "description" : "A coded name or descriptive label of the associated entity. If this is a coded value, codeValue and shortName should be used. If this is just a string value, only shortName is necessary ",
+                      "type" : "object",
+                      "additionalProperties" : false,
+                      "properties" : {
+                        "codeValue" : {
+                          "description" : "The code for the related entity",
+                          "type" : "string"
+                        },
+                        "shortName" : {
+                          "description" : "Short description of the related code not to exceed 25 characters",
+                          "type" : "string"
+                        },
+                        "longName" : {
+                          "description" : "Long description of the related code",
+                          "type" : "string"
+                        }
+                      }
+                    },
+                    "uri" : {
+                      "description" : "The URI of the associated email address",
+                      "type" : "string",
+                      "format" : "uri"
+                    },
+                    "itemID" : {
+                      "description" : "The unique identifier of the object in a collection",
+                      "type" : "string"
+                    }
+                  }
+                }
+              },
+              "instantMessages" : {
+                "description" : "A list of instant messages URIs",
+                "type" : "array",
+                "items" : {
+                  "type" : "object",
+                  "additionalProperties" : false,
+                  "properties" : {
+                    "nameCode" : {
+                      "description" : "A coded name or descriptive label of the associated entity. If this is a coded value, codeValue and shortName should be used. If this is just a string value, only shortName is necessary ",
+                      "type" : "object",
+                      "additionalProperties" : false,
+                      "properties" : {
+                        "codeValue" : {
+                          "description" : "The code for the related entity",
+                          "type" : "string"
+                        },
+                        "shortName" : {
+                          "description" : "Short description of the related code not to exceed 25 characters",
+                          "type" : "string"
+                        },
+                        "longName" : {
+                          "description" : "Long description of the related code",
+                          "type" : "string"
+                        }
+                      }
+                    },
+                    "uri" : {
+                      "description" : "The URI of the associated email address",
+                      "type" : "string",
+                      "format" : "uri"
+                    },
+                    "itemID" : {
+                      "description" : "The unique identifier of the object in a collection",
+                      "type" : "string"
+                    }
+                  }
+                }
+              },
+              "socialNetworks" : {
+                "description" : "A list of social networks addresses",
+                "type" : "array",
+                "items" : {
+                  "type" : "object",
+                  "additionalProperties" : false,
+                  "properties" : {
+                    "nameCode" : {
+                      "description" : "A coded name or descriptive label of the associated entity. If this is a coded value, codeValue and shortName should be used. If this is just a string value, only shortName is necessary ",
+                      "type" : "object",
+                      "additionalProperties" : false,
+                      "properties" : {
+                        "codeValue" : {
+                          "description" : "The code for the related entity",
+                          "type" : "string"
+                        },
+                        "shortName" : {
+                          "description" : "Short description of the related code not to exceed 25 characters",
+                          "type" : "string"
+                        },
+                        "longName" : {
+                          "description" : "Long description of the related code",
+                          "type" : "string"
+                        }
+                      }
+                    },
+                    "uri" : {
+                      "description" : "The URI of the associated email address",
+                      "type" : "string",
+                      "format" : "uri"
+                    },
+                    "itemID" : {
+                      "description" : "The unique identifier of the object in a collection",
+                      "type" : "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "businessCommunication" : {
+            "description" : "A container of communication mechanisms.",
+            "type" : "object",
+            "additionalProperties" : false,
+            "properties" : {
+              "landlines" : {
+                "description" : "A list of land-line telephone numbers",
+                "type" : "array",
+                "items" : {
+                  "type" : "object",
+                  "additionalProperties" : false,
+                  "properties" : {
+                    "nameCode" : {
+                      "description" : "A coded name or descriptive label of the associated entity. If this is a coded value, codeValue and shortName should be used. If this is just a string value, only shortName is necessary ",
+                      "type" : "object",
+                      "additionalProperties" : false,
+                      "properties" : {
+                        "codeValue" : {
+                          "description" : "The code for the related entity",
+                          "type" : "string"
+                        },
+                        "shortName" : {
+                          "description" : "Short description of the related code not to exceed 25 characters",
+                          "type" : "string"
+                        },
+                        "longName" : {
+                          "description" : "Long description of the related code",
+                          "type" : "string"
+                        }
+                      }
+                    },
+                    "countryDialing" : {
+                      "description" : "The country dialing code is the national prefix to be used when dialing TO that particular country FROM another country.  ",
+                      "type" : "string"
+                    },
+                    "areaDialing" : {
+                      "description" : "The local area dialing code for a telephone number.",
+                      "type" : "string"
+                    },
+                    "dialNumber" : {
+                      "description" : "The local communication number, not including country dialing or area dialing codes.   If component parts of the telephone number are being communicated then the dialNumber is required.",
+                      "type" : "string"
+                    },
+                    "extension" : {
+                      "description" : "The extension of the local communication number.  In the case of a Telephone Number accessing a Pager Network, the extension may be the Pager Identification Number required to leave a message for the Pager Number (i.e. Pager Pin).  These are mutually exclusive.",
+                      "type" : "string"
+                    },
+                    "access" : {
+                      "description" : "National Direct Dialing Prefix.  Also known as the trunk prefix or National Prefix.  It is the number to be dialed in a domestic telephone call, preceding any necessary area code and subscriber number (i.e. dial number).  When calling from outside of the country, the national direct dial prefix is omitted by the caller.  In Australia, Germany, and United Kingdom the trunk prefix is 0.  In the US and Canada it is 1.",
+                      "type" : "string"
+                    },
+                    "formattedNumber" : {
+                      "description" : "The formatted telephone number.  The component parts of the telephone are put together into a presentation pattern as defined by the regex format specified.  Please note that \\ is used as an escape character in regex, but a double \\ is needed to escape within the json schema.  The regex will accept +CC NNNNNNNNNNNNNN where + is the symbol indicating the caller to enter their country specific code to call from outside the country.  CC is the country code for an international number (optional), and the area code and dial number.  The local access code (i.e. 1 (201) 333 4444. 1 is the access code in US) is not passed.  The UI will present the phone number following its own presentation convention",
+                      "type" : "string"
+                    },
+                    "itemID" : {
+                      "description" : "The unique identifier of the object in a collection",
+                      "type" : "string"
+                    }
+                  }
+                }
+              },
+              "mobiles" : {
+                "description" : "A list of mobile telephone numbers",
+                "type" : "array",
+                "items" : {
+                  "type" : "object",
+                  "additionalProperties" : false,
+                  "properties" : {
+                    "nameCode" : {
+                      "description" : "A coded name or descriptive label of the associated entity. If this is a coded value, codeValue and shortName should be used. If this is just a string value, only shortName is necessary ",
+                      "type" : "object",
+                      "additionalProperties" : false,
+                      "properties" : {
+                        "codeValue" : {
+                          "description" : "The code for the related entity",
+                          "type" : "string"
+                        },
+                        "shortName" : {
+                          "description" : "Short description of the related code not to exceed 25 characters",
+                          "type" : "string"
+                        },
+                        "longName" : {
+                          "description" : "Long description of the related code",
+                          "type" : "string"
+                        }
+                      }
+                    },
+                    "countryDialing" : {
+                      "description" : "The country dialing code is the national prefix to be used when dialing TO that particular country FROM another country.  ",
+                      "type" : "string"
+                    },
+                    "areaDialing" : {
+                      "description" : "The local area dialing code for a telephone number.",
+                      "type" : "string"
+                    },
+                    "dialNumber" : {
+                      "description" : "The local communication number, not including country dialing or area dialing codes.   If component parts of the telephone number are being communicated then the dialNumber is required.",
+                      "type" : "string"
+                    },
+                    "extension" : {
+                      "description" : "The extension of the local communication number.  In the case of a Telephone Number accessing a Pager Network, the extension may be the Pager Identification Number required to leave a message for the Pager Number (i.e. Pager Pin).  These are mutually exclusive.",
+                      "type" : "string"
+                    },
+                    "access" : {
+                      "description" : "National Direct Dialing Prefix.  Also known as the trunk prefix or National Prefix.  It is the number to be dialed in a domestic telephone call, preceding any necessary area code and subscriber number (i.e. dial number).  When calling from outside of the country, the national direct dial prefix is omitted by the caller.  In Australia, Germany, and United Kingdom the trunk prefix is 0.  In the US and Canada it is 1.",
+                      "type" : "string"
+                    },
+                    "formattedNumber" : {
+                      "description" : "The formatted telephone number.  The component parts of the telephone are put together into a presentation pattern as defined by the regex format specified.  Please note that \\ is used as an escape character in regex, but a double \\ is needed to escape within the json schema.  The regex will accept +CC NNNNNNNNNNNNNN where + is the symbol indicating the caller to enter their country specific code to call from outside the country.  CC is the country code for an international number (optional), and the area code and dial number.  The local access code (i.e. 1 (201) 333 4444. 1 is the access code in US) is not passed.  The UI will present the phone number following its own presentation convention",
+                      "type" : "string"
+                    },
+                    "itemID" : {
+                      "description" : "The unique identifier of the object in a collection",
+                      "type" : "string"
+                    }
+                  }
+                }
+              },
+              "faxes" : {
+                "description" : "A list of fax telephone numbers",
+                "type" : "array",
+                "items" : {
+                  "type" : "object",
+                  "additionalProperties" : false,
+                  "properties" : {
+                    "nameCode" : {
+                      "description" : "A coded name or descriptive label of the associated entity. If this is a coded value, codeValue and shortName should be used. If this is just a string value, only shortName is necessary ",
+                      "type" : "object",
+                      "additionalProperties" : false,
+                      "properties" : {
+                        "codeValue" : {
+                          "description" : "The code for the related entity",
+                          "type" : "string"
+                        },
+                        "shortName" : {
+                          "description" : "Short description of the related code not to exceed 25 characters",
+                          "type" : "string"
+                        },
+                        "longName" : {
+                          "description" : "Long description of the related code",
+                          "type" : "string"
+                        }
+                      }
+                    },
+                    "countryDialing" : {
+                      "description" : "The country dialing code is the national prefix to be used when dialing TO that particular country FROM another country.  ",
+                      "type" : "string"
+                    },
+                    "areaDialing" : {
+                      "description" : "The local area dialing code for a telephone number.",
+                      "type" : "string"
+                    },
+                    "dialNumber" : {
+                      "description" : "The local communication number, not including country dialing or area dialing codes.   If component parts of the telephone number are being communicated then the dialNumber is required.",
+                      "type" : "string"
+                    },
+                    "extension" : {
+                      "description" : "The extension of the local communication number.  In the case of a Telephone Number accessing a Pager Network, the extension may be the Pager Identification Number required to leave a message for the Pager Number (i.e. Pager Pin).  These are mutually exclusive.",
+                      "type" : "string"
+                    },
+                    "access" : {
+                      "description" : "National Direct Dialing Prefix.  Also known as the trunk prefix or National Prefix.  It is the number to be dialed in a domestic telephone call, preceding any necessary area code and subscriber number (i.e. dial number).  When calling from outside of the country, the national direct dial prefix is omitted by the caller.  In Australia, Germany, and United Kingdom the trunk prefix is 0.  In the US and Canada it is 1.",
+                      "type" : "string"
+                    },
+                    "formattedNumber" : {
+                      "description" : "The formatted telephone number.  The component parts of the telephone are put together into a presentation pattern as defined by the regex format specified.  Please note that \\ is used as an escape character in regex, but a double \\ is needed to escape within the json schema.  The regex will accept +CC NNNNNNNNNNNNNN where + is the symbol indicating the caller to enter their country specific code to call from outside the country.  CC is the country code for an international number (optional), and the area code and dial number.  The local access code (i.e. 1 (201) 333 4444. 1 is the access code in US) is not passed.  The UI will present the phone number following its own presentation convention",
+                      "type" : "string"
+                    },
+                    "itemID" : {
+                      "description" : "The unique identifier of the object in a collection",
+                      "type" : "string"
+                    }
+                  }
+                }
+              },
+              "pagers" : {
+                "description" : "A list of pager telephone numbers",
+                "type" : "array",
+                "items" : {
+                  "type" : "object",
+                  "additionalProperties" : false,
+                  "properties" : {
+                    "nameCode" : {
+                      "description" : "A coded name or descriptive label of the associated entity. If this is a coded value, codeValue and shortName should be used. If this is just a string value, only shortName is necessary ",
+                      "type" : "object",
+                      "additionalProperties" : false,
+                      "properties" : {
+                        "codeValue" : {
+                          "description" : "The code for the related entity",
+                          "type" : "string"
+                        },
+                        "shortName" : {
+                          "description" : "Short description of the related code not to exceed 25 characters",
+                          "type" : "string"
+                        },
+                        "longName" : {
+                          "description" : "Long description of the related code",
+                          "type" : "string"
+                        }
+                      }
+                    },
+                    "countryDialing" : {
+                      "description" : "The country dialing code is the national prefix to be used when dialing TO that particular country FROM another country.  ",
+                      "type" : "string"
+                    },
+                    "areaDialing" : {
+                      "description" : "The local area dialing code for a telephone number.",
+                      "type" : "string"
+                    },
+                    "dialNumber" : {
+                      "description" : "The local communication number, not including country dialing or area dialing codes.   If component parts of the telephone number are being communicated then the dialNumber is required.",
+                      "type" : "string"
+                    },
+                    "extension" : {
+                      "description" : "The extension of the local communication number.  In the case of a Telephone Number accessing a Pager Network, the extension may be the Pager Identification Number required to leave a message for the Pager Number (i.e. Pager Pin).  These are mutually exclusive.",
+                      "type" : "string"
+                    },
+                    "access" : {
+                      "description" : "National Direct Dialing Prefix.  Also known as the trunk prefix or National Prefix.  It is the number to be dialed in a domestic telephone call, preceding any necessary area code and subscriber number (i.e. dial number).  When calling from outside of the country, the national direct dial prefix is omitted by the caller.  In Australia, Germany, and United Kingdom the trunk prefix is 0.  In the US and Canada it is 1.",
+                      "type" : "string"
+                    },
+                    "formattedNumber" : {
+                      "description" : "The formatted telephone number.  The component parts of the telephone are put together into a presentation pattern as defined by the regex format specified.  Please note that \\ is used as an escape character in regex, but a double \\ is needed to escape within the json schema.  The regex will accept +CC NNNNNNNNNNNNNN where + is the symbol indicating the caller to enter their country specific code to call from outside the country.  CC is the country code for an international number (optional), and the area code and dial number.  The local access code (i.e. 1 (201) 333 4444. 1 is the access code in US) is not passed.  The UI will present the phone number following its own presentation convention",
+                      "type" : "string"
+                    },
+                    "itemID" : {
+                      "description" : "The unique identifier of the object in a collection",
+                      "type" : "string"
+                    }
+                  }
+                }
+              },
+              "emails" : {
+                "description" : "A list of email addresses",
+                "type" : "array",
+                "items" : {
+                  "type" : "object",
+                  "additionalProperties" : false,
+                  "properties" : {
+                    "nameCode" : {
+                      "description" : "A coded name or descriptive label of the associated entity. If this is a coded value, codeValue and shortName should be used. If this is just a string value, only shortName is necessary ",
+                      "type" : "object",
+                      "additionalProperties" : false,
+                      "properties" : {
+                        "codeValue" : {
+                          "description" : "The code for the related entity",
+                          "type" : "string"
+                        },
+                        "shortName" : {
+                          "description" : "Short description of the related code not to exceed 25 characters",
+                          "type" : "string"
+                        },
+                        "longName" : {
+                          "description" : "Long description of the related code",
+                          "type" : "string"
+                        }
+                      }
+                    },
+                    "emailUri" : {
+                      "description" : "The URI of the associated email address",
+                      "type" : "string",
+                      "format" : "email"
+                    },
+                    "itemID" : {
+                      "description" : "The unique identifier of the object in a collection",
+                      "type" : "string"
+                    }
+                  }
+                }
+              },
+              "internetAddresses" : {
+                "description" : "A list of internet URIs",
+                "type" : "array",
+                "items" : {
+                  "type" : "object",
+                  "title" : "InternetAddressWithItemID",
+                  "additionalProperties" : false,
+                  "properties" : {
+                    "nameCode" : {
+                      "description" : "A coded name or descriptive label of the associated entity. If this is a coded value, codeValue and shortName should be used. If this is just a string value, only shortName is necessary ",
+                      "type" : "object",
+                      "additionalProperties" : false,
+                      "properties" : {
+                        "codeValue" : {
+                          "description" : "The code for the related entity",
+                          "type" : "string"
+                        },
+                        "shortName" : {
+                          "description" : "Short description of the related code not to exceed 25 characters",
+                          "type" : "string"
+                        },
+                        "longName" : {
+                          "description" : "Long description of the related code",
+                          "type" : "string"
+                        }
+                      }
+                    },
+                    "uri" : {
+                      "description" : "The URI of the associated email address",
+                      "type" : "string",
+                      "format" : "uri"
+                    },
+                    "itemID" : {
+                      "description" : "The unique identifier of the object in a collection",
+                      "type" : "string"
+                    }
+                  }
+                }
+              },
+              "instantMessages" : {
+                "description" : "A list of instant messages URIs",
+                "type" : "array",
+                "items" : {
+                  "type" : "object",
+                  "additionalProperties" : false,
+                  "properties" : {
+                    "nameCode" : {
+                      "description" : "A coded name or descriptive label of the associated entity. If this is a coded value, codeValue and shortName should be used. If this is just a string value, only shortName is necessary ",
+                      "type" : "object",
+                      "additionalProperties" : false,
+                      "properties" : {
+                        "codeValue" : {
+                          "description" : "The code for the related entity",
+                          "type" : "string"
+                        },
+                        "shortName" : {
+                          "description" : "Short description of the related code not to exceed 25 characters",
+                          "type" : "string"
+                        },
+                        "longName" : {
+                          "description" : "Long description of the related code",
+                          "type" : "string"
+                        }
+                      }
+                    },
+                    "uri" : {
+                      "description" : "The URI of the associated email address",
+                      "type" : "string",
+                      "format" : "uri"
+                    },
+                    "itemID" : {
+                      "description" : "The unique identifier of the object in a collection",
+                      "type" : "string"
+                    }
+                  }
+                }
+              },
+              "socialNetworks" : {
+                "description" : "A list of social networks addresses",
+                "type" : "array",
+                "items" : {
+                  "type" : "object",
+                  "additionalProperties" : false,
+                  "properties" : {
+                    "nameCode" : {
+                      "description" : "A coded name or descriptive label of the associated entity. If this is a coded value, codeValue and shortName should be used. If this is just a string value, only shortName is necessary ",
+                      "type" : "object",
+                      "additionalProperties" : false,
+                      "properties" : {
+                        "codeValue" : {
+                          "description" : "The code for the related entity",
+                          "type" : "string"
+                        },
+                        "shortName" : {
+                          "description" : "Short description of the related code not to exceed 25 characters",
+                          "type" : "string"
+                        },
+                        "longName" : {
+                          "description" : "Long description of the related code",
+                          "type" : "string"
+                        }
+                      }
+                    },
+                    "uri" : {
+                      "description" : "The URI of the associated email address",
+                      "type" : "string",
+                      "format" : "uri"
+                    },
+                    "itemID" : {
+                      "description" : "The unique identifier of the object in a collection",
+                      "type" : "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "photos" : {
+            "description" : "A list of photo URIs.",
+            "type" : "array",
+            "items" : {
+              "type" : "object",
+              "additionalProperties" : false,
+              "properties" : {
+                "nameCode" : {
+                  "description" : "A coded name or descriptive label of the associated entity. If this is a coded value, codeValue and shortName should be used. If this is just a string value, only shortName is necessary ",
+                  "type" : "object",
+                  "additionalProperties" : false,
+                  "properties" : {
+                    "codeValue" : {
+                      "description" : "The code for the related entity",
+                      "type" : "string"
+                    },
+                    "shortName" : {
+                      "description" : "Short description of the related code not to exceed 25 characters",
+                      "type" : "string"
+                    },
+                    "longName" : {
+                      "description" : "Long description of the related code",
+                      "type" : "string"
+                    }
+                  }
+                },
+                "links" : {
+                  "type" : "array",
+                  "items" : {
+                    "description" : "A link description object is used to describe link relations.  In the context of a schema, it defines the link relations of the instances of the schema, and can be parameterized by the instance values.  The link description format can be used on its own in regular (non-schema documents), and use of this format can be declared by referencing the normative link description schema as the the schema for the data structure that uses the links",
+                    "type" : "object",
+                    "additionalProperties" : false,
+                    "properties" : {
+                      "href" : {
+                        "description" : "The URI of the related entity",
+                        "type" : "string",
+                        "format" : "uri"
+                      },
+                      "rel" : {
+                        "description" : "Indicates the nature of the relationship of the related resource to the resource that generated this representation",
+                        "type" : "string",
+                        "enum" : [ "alternate", "create", "canonical", "describedby", "edit-form", "enclosure", "full", "related", "root", "self", "up", "search", "/adp/invoke", "/adp/image", "/adp/confirm-message", "/adp/status-monitor", "/adp/codelist", "/adp/template", "/adp/externalLink" ]
+                      },
+                      "title" : {
+                        "description" : "This property defines a title for the link.  The value must be a string. User agents MAY use this title when presenting the link to the user.",
+                        "type" : "string"
+                      },
+                      "targetSchema" : {
+                        "description" : "This property is a schema that defines the expected structure of the JSON representation of the target of the link, if the target of the link is returned using JSON representation.",
+                        "type" : "string"
+                      },
+                      "mediaType" : {
+                        "description" : "The media type that the linked resource will return (Response)",
+                        "type" : "string",
+                        "enum" : [ "application/json", "text/html", "application/pdf", "image/jpeg", "image/gif", "image/png", "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document" ]
+                      },
+                      "method" : {
+                        "description" : "The HTTP method code (HTTP Verb) traverse the link (GET, POST, PUT or DELETE)",
+                        "type" : "string",
+                        "enum" : [ "GET", "POST", "DELETE", "PUT" ]
+                      },
+                      "encType" : {
+                        "description" : "If present, this property indicates a query media type format that the server supports for querying or posting to the collection of instances at the target resource.  The query can be suffixed to the target URI to query the collection with property-based constraints on the resources that SHOULD be returned from the server or used to post data to the resource (depending on the method). (Request)",
+                        "type" : "string",
+                        "enum" : [ "application/json", "application/x-www-form-urlencoded" ]
+                      },
+                      "schema" : {
+                        "description" : "This property contains a schema which defines the acceptable structure of the submitted request.  For a GET request, this schema would define the properties for the query string and for a POST request, this would define the body.",
+                        "type" : "string"
+                      }
+                    }
+                  }
+                },
+                "itemID" : {
+                  "description" : "The unique identifier of the object in a collection",
+                  "type" : "string"
+                }
+              }
+            }
+          },
+          "itemID" : {
+            "description" : "The unique identifier of an associate contact in the array",
+            "type" : "string"
+          },
+          "links" : {
+            "type" : "array",
+            "items" : {
+              "description" : "A link description object is used to describe link relations.  In the context of a schema, it defines the link relations of the instances of the schema, and can be parameterized by the instance values.  The link description format can be used on its own in regular (non-schema documents), and use of this format can be declared by referencing the normative link description schema as the the schema for the data structure that uses the links",
+              "type" : "object",
+              "additionalProperties" : false,
+              "properties" : {
+                "href" : {
+                  "description" : "The URI of the related entity",
+                  "type" : "string",
+                  "format" : "uri"
+                },
+                "rel" : {
+                  "description" : "Indicates the nature of the relationship of the related resource to the resource that generated this representation",
+                  "type" : "string",
+                  "enum" : [ "alternate", "create", "canonical", "describedby", "edit-form", "enclosure", "full", "related", "root", "self", "up", "search", "/adp/invoke", "/adp/image", "/adp/confirm-message", "/adp/status-monitor", "/adp/codelist", "/adp/template", "/adp/externalLink" ]
+                },
+                "title" : {
+                  "description" : "This property defines a title for the link.  The value must be a string. User agents MAY use this title when presenting the link to the user.",
+                  "type" : "string"
+                },
+                "targetSchema" : {
+                  "description" : "This property is a schema that defines the expected structure of the JSON representation of the target of the link, if the target of the link is returned using JSON representation.",
+                  "type" : "string"
+                },
+                "mediaType" : {
+                  "description" : "The media type that the linked resource will return (Response)",
+                  "type" : "string",
+                  "enum" : [ "application/json", "text/html", "application/pdf", "image/jpeg", "image/gif", "image/png", "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document" ]
+                },
+                "method" : {
+                  "description" : "The HTTP method code (HTTP Verb) traverse the link (GET, POST, PUT or DELETE)",
+                  "type" : "string",
+                  "enum" : [ "GET", "POST", "DELETE", "PUT" ]
+                },
+                "encType" : {
+                  "description" : "If present, this property indicates a query media type format that the server supports for querying or posting to the collection of instances at the target resource.  The query can be suffixed to the target URI to query the collection with property-based constraints on the resources that SHOULD be returned from the server or used to post data to the resource (depending on the method). (Request)",
+                  "type" : "string",
+                  "enum" : [ "application/json", "application/x-www-form-urlencoded" ]
+                },
+                "schema" : {
+                  "description" : "This property contains a schema which defines the acceptable structure of the submitted request.  For a GET request, this schema would define the properties for the query string and for a POST request, this would define the body.",
+                  "type" : "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
